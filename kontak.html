@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Kontak — YuPay</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/logo-yupay.png">
+    <style>
+        .contact-page {
+            padding: 145px 0 90px
+        }
+
+        .contact-wrap {
+            max-width: 850px;
+            margin: auto
+        }
+
+        .contact-wrap h1 {
+            font-size: 48px;
+            line-height: 1.08;
+            letter-spacing: -2.5px
+        }
+
+        .contact-wrap>p {
+            max-width: 620px;
+            color: #7b8799;
+            font-size: 14px;
+            line-height: 1.8
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 35px
+        }
+
+        .contact-card {
+            background: #fff;
+            border: 1px solid #e6ebf2;
+            border-radius: 22px;
+            padding: 28px
+        }
+
+        .contact-card span {
+            display: grid;
+            place-items: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: #eaf3ff;
+            color: #1769d2;
+            font-weight: 800
+        }
+
+        .contact-card h2 {
+            font-size: 15px
+        }
+
+        .contact-card p {
+            font-size: 12px;
+            color: #7b8799;
+            line-height: 1.7
+        }
+
+        .contact-card a {
+            color: #1769d2;
+            font-size: 12px;
+            font-weight: 700
+        }
+
+        @media(max-width:680px) {
+            .contact-page {
+                padding: 110px 0 60px
+            }
+
+            .contact-wrap h1 {
+                font-size: 38px
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container"><a class="brand" href="index.html"><img class="logo-img" src="assets/logo-yupay.png"
+                    alt="YuPay logo">YuPay</a><a class="nav-btn" href="index.html">← Kembali</a></nav>
+    </header>
+    <main class="contact-page">
+        <div class="container contact-wrap"><label>KONTAK</label>
+            <h1>Butuh bantuan?<br><span style="color:#1769d2">Kami siap membantu.</span></h1>
+            <p>Untuk pertanyaan tentang YuPay, paket langganan, pembayaran, atau kendala penggunaan, hubungi tim YuPay
+                melalui kanal resmi.</p>
+            <div class="contact-grid">
+                <article class="contact-card"><span>✉</span>
+                    <h2>Email</h2>
+                    <p>Pertanyaan dan bantuan umum mengenai layanan YuPay.</p><a
+                        href="mailto:YuPay.id@gmail.com">YuPay.id@gmail.com →</a>
+                </article>
+                <article class="contact-card"><span>?</span>
+                    <h2>Pusat Bantuan</h2>
+                    <p>Informasi bantuan dan panduan penggunaan akan tersedia seiring pengembangan YuPay.</p><a
+                        href="index.html#faq">Lihat FAQ →</a>
+                </article>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
