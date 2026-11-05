@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="YuPay — Status Pembayaran">
+  <title>Pembayaran Sedang Diverifikasi — YuPay</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/payment/finish.css">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo-yupay.png">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a class="brand" href="/index.html"><img class="logo-img" src="/assets/logo-yupay.png" alt="YuPay logo">YuPay</a>
+    </nav>
+  </header>
+
+  <main class="payment-finish">
+    <div class="container">
+      <div class="finish-card">
+        <div class="status-icon pending">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" stroke-dasharray="4 4" opacity="0.3"/>
+            <path d="M32 18V32L40 36" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        
+        <h1>Pembayaran Sedang Diverifikasi</h1>
+        <p class="subtitle">Transaksi Anda sedang dalam proses verifikasi oleh sistem pembayaran.</p>
+        
+        <div class="info-box">
+          <div class="info-item">
+            <span class="info-label">Status</span>
+            <span class="info-value pending-text">Menunggu Verifikasi</span>
+          </div>
+        </div>
+
+        <div class="instructions">
+          <h2>Langkah Selanjutnya</h2>
+          <ol>
+            <li>
+              <strong>Buka aplikasi YuPay</strong> di perangkat Anda
+            </li>
+            <li>
+              <strong>Tekan tombol "Periksa Status"</strong> untuk memverifikasi pembayaran
+            </li>
+            <li>
+              Status langganan akan diperbarui setelah pembayaran terverifikasi
+            </li>
+          </ol>
+        </div>
+
+        <div class="actions">
+          <a href="yupay://langganan" class="btn primary" id="openApp">Buka Aplikasi YuPay</a>
+          <a href="/index.html" class="btn secondary">Kembali ke Beranda</a>
+        </div>
+
+        <div class="note-box">
+          <p>💡 Verifikasi pembayaran dilakukan di aplikasi YuPay untuk keamanan transaksi Anda.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><a class="brand" href="/index.html"><img class="logo-img" src="/assets/logo-yupay.png" alt="YuPay logo">YuPay</a>
+        <p>Aplikasi kasir digital untuk bisnis yang ingin bekerja lebih rapi.</p>
+      </div>
+      <div><a href="/index.html">Home</a><a href="/index.html#fitur">Fitur</a><a href="/index.html#harga">Harga</a><a href="/index.html#faq">FAQ</a><a
+          href="/download.html">Download</a><a href="/kontak.html">Kontak</a></div>
+      <div><a href="/syarat-ketentuan.html">Syarat & Ketentuan</a><a href="/kebijakan-privasi.html">Kebijakan Privasi</a>
+      </div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> YuPay. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('openApp').addEventListener('click', function(e) {
+      setTimeout(function() {
+        if (document.hidden || document.webkitHidden) {
+          return;
+        }
+        if (confirm('Aplikasi YuPay tidak terdeteksi. Apakah Anda ingin mengunduh aplikasi?')) {
+          window.location.href = '../download.html';
+        }
+      }, 2000);
+    });
+  </script>
+</body>
+
+</html>
